@@ -1,0 +1,38 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+{% block head %}
+    <title>Auctions</title>
+    <link href="{% static 'auctions/index.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="div_return_home">
+        <a href="{% url 'index' %}"> < Return Home</a>
+    </div>
+
+    <div class="div_ul">
+        {% for all_auctions in all_auctions %}
+            {% if all_auctions.buyer is None %}
+                <ul class="ul_auctions">
+                    <li class="li_auctions">
+                        <div class="div_auctions">
+                            {% if all_auctions.Auction_image.url is not None %}
+                                <a href="{% url 'auction' all_auctions.Auction_title %}"><img class="auctions_image" src="{{all_auctions.Auction_image.url}}" alt="{{all_auctions.Auction_title}}"></a>
+                            {% else %}
+                                <a href="{% url 'auction' all_auctions.Auction_title %}"><img class="auctions_image" src=" ../../../../../media/images/noimage.jpg " alt="{{all_auctions.Auction_title}}"></a>
+                            {% endif %}
+                            <p class="title_auction"> {{all_auctions.Auction_title}}</p>
+                            <p class="price"><span></span>Starting Price: ${{all_auctions.Auction_price}} </p>   
+                            <p class="price"><span></span>bid price: ${{all_auctions.bid_price}} </p>   
+                            <p class="description">{{all_auctions.Auction_description}}</p>   
+                        </div>
+                    </li>
+                </ul>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+{% endblock %}

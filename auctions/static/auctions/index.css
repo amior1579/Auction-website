@@ -1,0 +1,120 @@
+.div_open_and_closeed_auctions{
+    text-align: center;
+    margin: 10px 0 40px 0;
+}
+
+.div_open_and_closeed_auctions a, .div_return_home a{
+    border: solid 1px black;
+    background-color: black;
+    color: white;
+    padding: 7px 20px 7px;
+    border-radius: 5px;
+}
+
+.div_open_and_closeed_auctions a:hover{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+.div_return_home{
+    text-align: left;
+    padding: 0 0 0 25px;
+    margin: 10px 0 40px 0;
+}
+.div_return_home a:hover{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+.div_ul{
+    display: block;
+    text-align: left;
+    padding: 0 0 0 25px;
+}
+
+.ul_auctions{
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    width: 250px;
+}
+
+.li_auctions{
+    display: inline-block;
+}
+
+
+.li_auctions:hover{
+    box-shadow: 2px 2px 20px rgb(202, 202, 202);
+    border-radius: 10px;
+}
+
+
+.div_auctions{
+    border: solid 1px rgb(231, 231, 231);
+    border-radius: 10px;
+    width: 242px;
+}
+
+
+.auctions_image{
+    display: inline;
+    width: 190px;
+    height: 260px;
+    border-radius: 10px 10px 0 0;
+    padding: 20px;
+}
+
+
+
+.sold_message{
+    position: absolute;
+    width: 240px;
+    padding: 6px 0 6px 0;
+    background-color: rgba(255, 87, 87, 0.904);
+    border-radius: 10px 10px 0 0;
+}
+
+
+.buy_message{
+    position: absolute;
+    width: 240px;
+    padding: 6px 0 6px 0;
+    background-color: rgba(87, 255, 109, 0.904);
+    border-radius: 10px 10px 0 0;
+}
+
+
+.title_auction{
+    font-weight: 300;
+    font-size: 20px;
+    padding: 2px 0 0 10px;
+    color: rgb(32, 32, 32);
+}
+
+
+
+
+.price{
+    text-align: left;
+    margin: -10px 0 0 0;
+    padding: 15px 0 5px 10px;
+    color: rgb(121, 113, 113);
+    font-size: 20px;
+}
+
+
+.price span{
+    font-size: 22px;
+}
+
+
+.description{
+    width: 200px;
+    text-align: left;
+    padding: 10px;
+    
+}

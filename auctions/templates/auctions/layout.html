@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'auctions/styles.css' %}" rel="stylesheet">
+        {% block head %}
+        {% endblock %}
+        <title>Auctions</title>
+    </head>
+    <body>
+        <div class="nav">
+            <div class="div_site_name">
+                <h1 class="site_name">Auctions</h1>
+            </div>
+            <div class="div_navbar">
+                <ul class="navbar">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Active Listings</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="dropbutton">Categories</button>
+                            <div class="div_dropdown_content">                           
+                                {% for category in categories_nav %}
+                                    <a href="{% url 'category'  category.id %}">{{category.tag}}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        {% if user.is_authenticated %}
+                            <a class="nav-link" href="{% url 'watchlist'%}">WatchList</a>
+                        {% endif %}
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'create' %}">Create Auctions</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="div_user">
+                {% if user.is_authenticated %}
+                    <ul>
+                        <li class="nav-item">
+                            <p>Welcome <strong>{{ user.username }}</strong></p>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                        </li>
+                    </ul>
+                {% else %}
+                    <ul class="user_navbar">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Log In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'register' %}">Register</a>
+                        </li>
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+        <br>
+
+        {% block body %}
+
+        {% endblock %}
+        
+    </body>
+</html>

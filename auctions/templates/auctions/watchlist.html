@@ -1,0 +1,46 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+{% block head %}
+    <title>Watchlist</title>
+    <link href="{% static 'auctions/watchlist.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block body %}
+
+<h1 class="page_title">Watchlist</h1>
+<hr>
+
+<div class="div_ul">
+    {% for watchlist in all_watchlist %}
+        <ul class="ul_auctions">
+            <li class="li_auctions">
+                <div class="div_auctions">
+                    {% if watchlist.buyer is not None %}
+                            <p class="sold_message">This item was sold to {{watchlist.buyer.username}}</p>
+                        {% if watchlist.user == request.user %}
+                            <p class="sold_message">You've sold this item for {{watchlist.buyer.username}}</p>
+                        {% elif watchlist.buyer == request.user%}
+                            <p class="buy_message">You've won this auction!</p>
+                        {% endif %}
+                    {% elif watchlist.buyer is None %}
+                    {% endif %}
+                    {% if watchlist.Auction_image.url is not None %}
+                        <a href="{% url 'auction' watchlist.Auction_title %}"><img class="auctions_image" src="{{watchlist.Auction_image.url}}" alt="{{watchlist.Auction_title}}"></a>
+                    {% else %}
+                        <a href="{% url 'auction' watchlist.Auction_title %}"><img class="auctions_image" src=" ../../../../../media/images/noimage.jpg " alt="{{watchlist.Auction_title}}"></a>
+                    {% endif %}
+                    <p class="title_auction"> {{watchlist.Auction_title}}</p>
+                    <p class="price"><span></span>Starting Price: ${{watchlist.Auction_price}} </p>   
+                    <p class="price"><span></span>bid price: ${{watchlist.bid_price}} </p>   
+                    <p class="description">{{watchlist.Auction_description}}</p>     
+                </div>
+            </li>
+        </ul>
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}

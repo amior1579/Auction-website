@@ -1,0 +1,302 @@
+
+.message_warning{
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(252, 79, 79);
+    border-radius: 5px;
+    width: fit-content;
+    padding: 10px 25px 10px 25px;
+}
+
+
+
+
+.div_all{
+    display: block;
+    margin: 50px 0 0 0;
+}
+
+.div_auction{
+    text-align: center;
+}
+
+
+.section1{
+    display: inline-block;
+    margin: 0 0 0 0;
+    position:relative;
+    vertical-align: top;
+}
+
+img{
+    width: 450px;
+    height: 650px;
+    display: block;
+    border-radius: 10px;
+    margin: 0 0 0 0 ; 
+}
+
+.section2{
+    display: inline-block;
+    border: solid 1px rgba(0, 0, 0, 0.692);
+    padding: 15px;
+    border-radius: 10px;  
+    position:relative;
+}
+
+.section2:hover{
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.226);
+}
+/*--------------------*/
+
+.div_title{
+    padding: 0 0 5px 0;
+}
+
+.div_title h2{
+    text-align: left;
+    font-weight: 300;
+}
+
+.div_title span{
+    font-weight: 500;
+}
+
+/*---------------------Current_Bid-----------------------*/
+
+.div_Current_Bid{
+    background-color:antiquewhite;
+    text-align: left;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.div_Current_Bid h6{
+    font-size: 20px;
+    padding: 0 0 10px 0;
+}
+
+.p_USD{
+    text-indent: 30px;
+    padding: 5px 0 0 0;
+}
+
+.p_USD span{
+    font-size: 18px;
+    border: solid 1px black;
+    background-color: #000000;
+    color: white;
+    padding: 2px 10px 2px 10px;
+    border-radius: 5px;
+}
+
+.p_Enter_USD{
+    text-indent: 30px;
+    margin: -5px 0 0 0;
+    display: inline-block;
+    padding: 10px 0 0 0;
+
+}
+.price_form{
+    outline: none;
+    width: 90px;
+    border: solid 1px #575757;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.div_Current_Bid form{
+    display: inline-block;
+}
+
+.message_login{
+    text-align: center;
+    background-color: #ff5050b4;
+    border: solid 1px #ff5050b4;
+    border-radius: 10px;
+    padding: 5px 0 5px 0;
+}
+
+.sold_message{
+    text-align: center;
+    background-color: #ff5050b4;
+    border: solid 1px #ff5050b4;
+    border-radius: 10px;
+    padding: 5px 0 5px 0;
+}
+
+.won_message{
+    text-align: center;
+    background-color: #96ff50b4;
+    border: solid 1px #96ff50b4;
+    border-radius: 10px;
+    padding: 5px 0 5px 0;
+}
+/*----------------add/remove watchlist-----------------*/
+
+.div_remove_watchlist a{
+    display: block;
+    color: aliceblue;
+    border: solid 2px #000000;
+    background-color: #000000;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding: 5px 0 5px;
+    border-radius: 10px; 
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+
+.div_add_watchlist a{
+    display: block;
+    color: rgb(0, 0, 0);
+    border: solid 2px #000000;
+    background-color: #ffffff;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding: 5px 0 5px;
+    border-radius: 10px; 
+}
+
+/*-----------------Additional Ingormation-----------------*/
+
+.div_Additional{
+    margin: 35px 0 0 0;
+}
+
+.div_Additional h2{
+    margin: 0 0 10px 0;
+    text-align: left;
+    font-weight: 300;
+}
+
+table{
+    width: 500px;
+    text-align: left;
+}
+
+table ,td {
+    border: solid 2px rgb(255, 255, 255);
+    background-color: antiquewhite;
+}
+
+td{
+    padding: 8px;
+    border-radius: 15px;
+}
+
+/*-----------------close auction button-----------------*/
+
+.div_close_auction a{
+    display: block;
+    color: rgb(255, 255, 255);
+    border: solid 2px #000000;
+    background-color: #000000;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding: 5px 0 5px;
+    border-radius: 10px; 
+}
+
+/*-------------------comment form---------------------*/
+.div_comment{
+    margin: 30px 0 30px 0;
+    text-align: center;
+
+}
+
+.enter_comment h5{
+    font-weight: 400;
+    text-align: left;
+    text-indent: 180px;
+}
+
+
+.comment_body{
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    width: 1000px; 
+    text-indent: 10px;
+    height: 120px;
+    
+}
+
+.enter_comment button{
+    background-color: #575757;
+    border: solid 2px #575757;
+    color: antiquewhite;
+    border-radius: 8px;
+    padding: 6px 25px 6px;
+    width: 1000px;
+}
+
+.enter_comment button:focus{
+    outline: none;
+    box-shadow:  1px 1px 6px #57575794;
+}
+
+.login_message{
+    display: inline-block;
+    background-color: #8080809f;
+    width: auto;
+    padding: 10px 50px 10px;
+    border-radius: 10px;
+}
+/*----------------------------*/
+
+hr{
+    width: 1000px;
+}
+
+
+/*---------------------comment view---------------------*/
+.comment_box{
+    display: block;
+    margin: 70px 0 70px 0;
+    text-align: center;
+
+}
+
+.h_comment{
+    text-align: left;
+    text-indent: 175px;
+}
+
+.singel_comment{
+    background-color: antiquewhite;
+    border-radius: 15px;
+    padding: 20px;
+    width: 1000px;
+    margin: 0 auto 20px auto;
+
+}
+
+.user_p{
+    text-align: left;
+}
+
+.singel_comment span{
+    font-weight: 700;
+    font-size: 17px;
+}
+
+
+.comment_p{
+    font-weight: 500;
+    border: solid 1px rgb(119, 119, 119);
+    border-radius: 15px;
+    padding: 15px 9px 15px 9px;
+    text-align: left;
+}
+
+.p_date_comment{
+    text-align: right;
+    margin: 10px 0 0 0 ;
+}
+

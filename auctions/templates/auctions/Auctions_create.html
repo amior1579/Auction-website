@@ -1,0 +1,28 @@
+{% extends 'auctions/layout.html' %}
+{% load static %}
+
+
+{% block head %}
+<link href="{% static 'auctions/auctions_create_style.css' %}" rel="stylesheet">
+<title>Create</title>
+{% endblock %}
+
+
+{% block body %}
+
+<h1 class="page_title">Create Auctions</h1>
+
+{% if user.is_authenticated %}
+    <div class="create_form">
+        <form  method="post" enctype="multipart/form-data" action="{% url 'add' %}">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+            <button class="submit_button" type="submit">submit</button>
+        </form>
+    </div>
+{% else %}
+    <h5 class="login_message">You must <a href="{% url 'login' %}">log in</a> to make an auction</h5>
+{% endif %}
+
+{% endblock %}
